@@ -1,0 +1,5 @@
+Credentials cache: API:4FF6F69F-E2A3-44C0-9EDC-6E1D7A68196A
+        Principal: egomes@42LISBOA.COM
+
+  Issued                Expires               Principal
+Nov 23 14:54:05 2020  Nov 24 00:54:05 2020  krbtgt/42LISBOA.COM@42LISBOA.COM

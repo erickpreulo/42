@@ -6,7 +6,7 @@
 /*   By: egomes <egomes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 19:22:43 by egomes            #+#    #+#             */
-/*   Updated: 2020/12/01 21:12:49 by egomes           ###   ########.fr       */
+/*   Updated: 2020/12/05 10:46:46 by egomes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 char	*ft_strcpy(char *dest, char *src)
 {
-	char x;
+	int x;
 
 	x = 0;
 	while (src[x] != '\0')
@@ -25,4 +25,9 @@ char	*ft_strcpy(char *dest, char *src)
 	}
 	dest[x] = '\0';
 	return (dest);
+}
+
+int main(int argc, char **argv)
+{
+	printf("%s  %s \n%d   ", argv[1], argv[2], argc);
 }

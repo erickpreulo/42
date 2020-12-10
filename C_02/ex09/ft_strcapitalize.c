@@ -6,7 +6,7 @@
 /*   By: egomes <egomes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 16:42:59 by egomes            #+#    #+#             */
-/*   Updated: 2020/12/01 19:57:57 by egomes           ###   ########.fr       */
+/*   Updated: 2020/12/02 15:08:51 by egomes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	primeira_maiuscula(char *p)
 	}
 }
 
-char	*ft_str_is_printable(char *str)
+char	*ft_strcapitalize(char *str)
 {
 	minuscula(str);
 	primeira_maiuscula(str);

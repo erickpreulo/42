@@ -6,7 +6,7 @@
 /*   By: egomes <egomes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 21:52:47 by egomes            #+#    #+#             */
-/*   Updated: 2020/12/02 21:52:50 by egomes           ###   ########.fr       */
+/*   Updated: 2020/12/07 16:25:05 by egomes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,35 +14,33 @@
 
 void	ft_putchar(char c)
 {
-	write (1, &c, 1);
+	write(1, &c, 1);
 }
 
 void	ft_putnbr(int nb)
 {
+	char			tab[15];
+	int				i;
+	unsigned	int	holder;
+
+	i = 0;
+	holder = nb;
+	if (nb == 0)
+	{
+		ft_putchar('0');
+		return ;
+	}
 	if (nb < 0)
 	{
-		nb = -nb;
+		ft_putchar('-');
+		holder = -nb;
 	}
-	if (nb >= 10)
+	while (holder > 0)
 	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
+		tab[i] = (holder % 10 + '0');
+		holder /= 10;
+		i++;
 	}
-	else
-		ft_putchar(nb + '0');
-}
-
-int main(int argc, const char *argv[])
-{
-	int i;
-
-	i = -100;
-
-	while (i != 500)
-	{
-		ft_putnbr(i);
-		ft_putchar(' ');
-		i+= 50;
-	}
-	return 0;
+	while (--i >= 0)
+		ft_putchar(tab[i]);
 }

@@ -6,33 +6,26 @@
 /*   By: egomes <egomes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 21:23:51 by egomes            #+#    #+#             */
-/*   Updated: 2020/12/02 21:52:52 by egomes           ###   ########.fr       */
+/*   Updated: 2020/12/07 16:25:02 by egomes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <string.h>
 
 void	ft_putchar(char c)
 {
-	write (1, &c, 1);
+	write(1, &c, 1);
 }
 
 void	ft_putstr(char *str)
 {
-	int i;
+	char x;
 
-	i = 0;
-
-	while (str[i])
+	x = 0;
+	while (str[x] != '\0')
 	{
-		ft_putchar(str[i]);
-		i += 2;
+		ft_putchar(str[x]);
+		x++;
 	}
-}
-
-int	main(int argc, const char *argv[])
-{
-	char	str[] = {'H' ,'e' ,'l' ,'l' ,'o' ,' ' ,'w' ,'o' ,'r' ,'l' ,'d', '\n'};
-	ft_putstr(str);
-	return 0;
 }

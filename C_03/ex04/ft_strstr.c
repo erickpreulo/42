@@ -6,7 +6,7 @@
 /*   By: egomes <egomes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 16:05:26 by egomes            #+#    #+#             */
-/*   Updated: 2020/12/02 19:55:53 by egomes           ###   ########.fr       */
+/*   Updated: 2020/12/06 19:03:27 by egomes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strstr(char *str, char *to_find)
 	while (str[i] != '\0')
 	{
 		j = 0;
-		while (str[i + j] != '\0' && str[i + j] == to_find[j])
+		while (str[i + j] == to_find[j])
 		{
 			if (to_find[j + 1] == '\0')
 				return (&str[i]);
@@ -32,5 +32,5 @@ char	*ft_strstr(char *str, char *to_find)
 		}
 		++i;
 	}
-	return (&str[i]);
+	return ((void *)0);
 }

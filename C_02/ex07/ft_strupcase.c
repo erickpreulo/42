@@ -6,7 +6,7 @@
 /*   By: egomes <egomes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 15:41:06 by egomes            #+#    #+#             */
-/*   Updated: 2020/12/01 16:32:22 by egomes           ###   ########.fr       */
+/*   Updated: 2020/12/02 08:23:01 by egomes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,14 @@
 
 char	*ft_strupcase(char *str)
 {
-	while (str[0] != '\0')
+	int x;
+
+	x = 0;
+	while (str[x] != '\0')
 	{
-		if (str[0] >= 'a' && str[0] <= 'z')
-			str[0] -= 32;
-		str++;
+		if (str[x] >= 'a' && str[x] <= 'z')
+			str[x] -= 32;
+		x++;
 	}
 	return (str);
 }

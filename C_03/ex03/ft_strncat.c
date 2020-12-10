@@ -6,7 +6,7 @@
 /*   By: egomes <egomes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 15:59:20 by egomes            #+#    #+#             */
-/*   Updated: 2020/12/02 16:04:58 by egomes           ###   ########.fr       */
+/*   Updated: 2020/12/03 11:50:47 by egomes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int i;
-	int j;
+	unsigned int i;
+	unsigned int j;
 
 	i = 0;
 	while (dest[i] != '\0')
 		i++;
 	j = 0;
-	while (src[j] != '\0' && (j < nb))
+	while (src[j] != '\0' && j < nb)
 	{
 		dest[i + j] = src[j];
 		j++;
